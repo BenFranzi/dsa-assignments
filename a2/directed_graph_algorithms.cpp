@@ -26,6 +26,33 @@
 
 #include "directed_graph.hpp"
 
+////iterator pattern
+//for (auto item : d) {
+//std::cout << item << " --> ";
+//for(auto neighbour = d.nbegin(item); neighbour != d.nend(item); ++neighbour) {
+//std::cout << *neighbour;
+//}
+//std::cout << std::endl;
+//}
+
+
+//HELPERS
+template <typename vertex> bool DFS(const directed_graph<vertex> & d, vertex &v,  std::stack<vertex> &pending, std::vector<vertex> &pendingArray) {
+//    pending.push(v);
+//    pendingArray.push_back(v);
+//    for (auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
+//        for (vertex item : pendingArray) {
+//            if (item == *neighbour) //duplicate item in pending;
+//                return false;
+//            DFS(d, *neighbour, pending, pendingArray);
+//        }
+//    }
+//    auto popped = pending.pop();
+//    pendingArray.erase(popped);
+//    return true;
+}
+//END HELPERS
+
 /*
  * Computes whether the input is a Directed Acyclic Graph (DAG).
  * A digraph is a DAG if there is no vertex that has a cycle.
@@ -34,8 +61,14 @@
  */
 template <typename vertex>
 bool is_dag(const directed_graph<vertex> & d) {
-    std::cout << "hey" << std::endl;
-    return false;
+    for (auto item : d) {
+        std::cout << item << " --> ";
+        for(auto neighbour = d.nbegin(item); neighbour != d.nend(item); ++neighbour) {
+            std::cout << *neighbour;
+        }
+        std::cout << std::endl;
+    }
+    return true;
 }
 
 /*

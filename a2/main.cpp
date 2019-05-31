@@ -23,7 +23,9 @@ int main() {
     graph.add_edge(a, b);
     graph.add_edge(a, c);
 
-    is_dag(graph);
+    directed_graph<char> empty;
+
+    std::cout << is_dag(graph) << std::endl;
 
     return 0;
 }

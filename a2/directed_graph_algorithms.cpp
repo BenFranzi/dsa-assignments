@@ -55,7 +55,6 @@ template <typename vertex> bool is_cycle(const directed_graph<vertex> &d, const 
     }
     pending.erase(v);
     return false;
-
 }
 //END HELPERS
 
@@ -117,6 +116,25 @@ std::list<vertex> topological_sort(const directed_graph<vertex> & d) {
     return result;
 }
 
+template <typename vertex> bool is_path(const directed_graph<vertex> &d, const std::size_t size, const vertex &v) {
+//    if (visited.count(v) == 0) {
+//        visited.insert(v);
+//        pending.insert(v);
+//        for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
+//            auto curr_neigh = *neighbour;
+//            bool exists_in_visited = visited.count(*neighbour) != 0;
+//            bool exists_in_pending = pending.count(*neighbour) != 0;
+//            if (!exists_in_visited && is_cycle(d, *neighbour, visited, pending))
+//                return true;
+//            else if (exists_in_pending)
+//                return true;
+//        }
+//    }
+//    pending.erase(v);
+    return false;
+
+}
+
 /*
  * Given a DAG, computes whether there is a Hamiltonian path.
  * a Hamiltonian path is a path that visits every vertex
@@ -124,6 +142,13 @@ std::list<vertex> topological_sort(const directed_graph<vertex> & d) {
  */
 template <typename vertex>
 bool is_hamiltonian_dag(const directed_graph<vertex> & d) {
+    std::unordered_set<vertex> visited;
+
+    for (auto vert : d) {
+        bool x = is_path(d, d.num_vertices(), vert);
+        if (x)
+            return true;
+    }
     return false;
 }
 
@@ -150,6 +175,21 @@ std::vector<std::vector<vertex>> strongly_connected_components(const directed_gr
     return std::vector<std::vector<vertex>>();
 }
 
+
+template <typename vertex> void find_distance(const directed_graph<vertex> & d, const vertex & u, std::unordered_map<vertex, int> & results, const int & count, std::unordered_set<vertex> & visited) {
+
+    for(auto neighbour = d.nbegin(u); neighbour != d.nend(u); ++neighbour) {
+        auto curr = *neighbour;
+        int curr_count = results[*neighbour];
+        if (curr_count == -1) {
+            results[*neighbour] = count;
+            find_distance(d, *neighbour, results, count + 1, visited);
+        } else if (curr_count > count) {
+            results[*neighbour] = count;
+            find_distance(d, *neighbour, results, count + 1, visited);
+        }
+    }
+}
 /*
  * Computes the shortest distance from u to every other vertex
  * in the graph d. The shortest distance is the smallest number
@@ -158,7 +198,20 @@ std::vector<std::vector<vertex>> strongly_connected_components(const directed_gr
  * be the number of vertices in d plus 1.
  */
 template <typename vertex>
-std::unordered_map<vertex, std::size_t> shortest_distances(const directed_graph<vertex> & d, const vertex & u) {
-    return std::unordered_map<vertex, std::size_t>();
+std::unordered_map<vertex, int> shortest_distances(const directed_graph<vertex> & d, const vertex & u) {
+    std::unordered_map<vertex, int> results;
+    std::unordered_set<vertex> visited;
+//    int count = 0;
+    for (auto vert : d) {
+        if (vert == u) {
+            results[vert] = 0;
+        } else {
+            results[vert] = d.num_vertices() + 1;
+        }
+    }
+
+    //static_cast<int>
+    find_distance(d, u, results, 1, visited);
+    return results;
 }
 

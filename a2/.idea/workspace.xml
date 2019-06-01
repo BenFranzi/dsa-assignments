@@ -12,6 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c59ded7d-cfd6-4a7c-8d59-b8e56ec1bc2c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/a2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/a2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/directed_graph_algorithms.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/directed_graph_algorithms.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -27,67 +32,66 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/main.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/directed_graph_algorithms.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="105" column="34" lean-forward="true" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#1227#1244#0" expanded="true" />
-                    <element signature="e#2249#2266#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/directed_graph.hpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="106" selection-start-line="106" selection-end-line="106" />
-                  <folding>
-                    <element signature="e#111#128#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/directed_graph_algorithms.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="265">
-                  <caret line="45" column="80" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="80" />
-                  <folding>
-                    <element signature="e#2249#2266#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/directed_graph_algorithms.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="208" column="48" selection-start-line="208" selection-start-column="48" selection-end-line="208" selection-end-column="48" />
+              <folding>
+                <element signature="e#1227#1244#0" expanded="true" />
+                <element signature="e#2249#2266#0" expanded="true" />
+                <element signature="e#3350#3367#0" expanded="true" />
+                <element signature="e#5275#5292#0" expanded="true" />
+                <element signature="e#3853#3870#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="843" column="28" selection-start-line="843" selection-start-column="12" selection-end-line="843" selection-end-column="28" />
+              <folding>
+                <element signature="e#308#320#0" expanded="true" />
+                <element signature="e#444#461#0" expanded="true" />
+                <element signature="e#1289#1306#0" expanded="true" />
+                <element signature="e#1996#2008#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/directed_graph.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="979">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
+              <folding>
+                <element signature="e#111#128#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>neigh</find>
       <find>iterat</find>
+      <find>testdis</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,7 +121,25 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="a2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="a2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2" type="462c0819:PsiDirectoryNode" />
+              <item name="a1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -163,29 +185,29 @@
       <workItem from="1559307354994" duration="2279000" />
       <workItem from="1559347142777" duration="4000" />
       <workItem from="1559347148786" duration="36000" />
-      <workItem from="1559347237301" duration="7333000" />
+      <workItem from="1559347237301" duration="13465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17443000" />
+    <option name="totallyTimeSpent" value="23575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-157" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.35840708" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35835996" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.11088083" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.29326424" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.29326424" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.26632124" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.26632124" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -204,8 +226,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/directed_graph_algorithms.cpp</url>
-          <line>116</line>
-          <option name="timeStamp" value="61" />
+          <line>214</line>
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -226,19 +248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="833" column="27" selection-start-line="833" selection-start-column="26" selection-end-line="833" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="476" column="36" selection-start-line="476" selection-start-column="9" selection-end-line="476" selection-end-column="36" />
-          <folding>
-            <element signature="e#308#320#0" expanded="true" />
-            <element signature="e#444#461#0" expanded="true" />
-            <element signature="e#1289#1306#0" expanded="true" />
-            <element signature="e#1996#2008#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -306,7 +315,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/directed_graph.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
+        <state relative-caret-position="979">
           <caret line="106" selection-start-line="106" selection-end-line="106" />
           <folding>
             <element signature="e#111#128#0" expanded="true" />
@@ -314,20 +323,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="843" column="28" selection-start-line="843" selection-start-column="12" selection-end-line="843" selection-end-column="28" />
+          <folding>
+            <element signature="e#308#320#0" expanded="true" />
+            <element signature="e#444#461#0" expanded="true" />
+            <element signature="e#1289#1306#0" expanded="true" />
+            <element signature="e#1996#2008#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        <state relative-caret-position="510">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/directed_graph_algorithms.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="105" column="34" lean-forward="true" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+        <state relative-caret-position="596">
+          <caret line="208" column="48" selection-start-line="208" selection-start-column="48" selection-end-line="208" selection-end-column="48" />
           <folding>
             <element signature="e#1227#1244#0" expanded="true" />
             <element signature="e#2249#2266#0" expanded="true" />
+            <element signature="e#3350#3367#0" expanded="true" />
+            <element signature="e#5275#5292#0" expanded="true" />
+            <element signature="e#3853#3870#0" expanded="true" />
           </folding>
         </state>
       </provider>

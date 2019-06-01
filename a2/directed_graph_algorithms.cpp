@@ -181,10 +181,7 @@ template <typename vertex> void find_distance(const directed_graph<vertex> & d, 
     for(auto neighbour = d.nbegin(u); neighbour != d.nend(u); ++neighbour) {
         auto curr = *neighbour;
         int curr_count = results[*neighbour];
-        if (curr_count == -1) {
-            results[*neighbour] = count;
-            find_distance(d, *neighbour, results, count + 1, visited);
-        } else if (curr_count > count) {
+        if  (count < curr_count) {
             results[*neighbour] = count;
             find_distance(d, *neighbour, results, count + 1, visited);
         }

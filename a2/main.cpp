@@ -3,7 +3,6 @@
 #include "directed_graph.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
     directed_graph<char> graph;
 
     char a = 'a';
@@ -14,7 +13,6 @@ int main() {
     char f = 'f';
     char g = 'g';
     char h = 'h';
-
 
     graph.add_vertex(a);
     graph.add_vertex(b);
@@ -31,11 +29,10 @@ int main() {
     graph.add_edge(d, b);
     graph.add_edge(c, f);
 
-    ////CYCLE
-//    graph.add_edge(b, c);
-    /////////
-    print_graph(graph);
-    std::cout << is_dag(graph, a) << std::endl;
+//    print_graph(graph);
+    std::cout << "should be true  (1): " << is_dag(graph) << std::endl;
+    graph.add_edge(b, c);
+    std::cout << "should be false (0): " << is_dag(graph) << std::endl;
 
     return 0;
 }

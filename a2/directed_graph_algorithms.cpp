@@ -26,18 +26,6 @@
 
 #include "directed_graph.hpp"
 
-
-//Print relationships
-template <typename vertex> void print_graph(const directed_graph<vertex> & d) {
-    for (auto item : d) {
-        std::cout << item << " --> ";
-        for(auto neighbour = d.nbegin(item); neighbour != d.nend(item); ++neighbour) {
-            std::cout << *neighbour;
-        }
-        std::cout << std::endl;
-    }
-}
-
 //DFS
 template <typename vertex> bool is_cycle(const directed_graph<vertex> &d, const vertex &v, std::unordered_set<vertex> & visited, std::unordered_set<vertex> & pending) {
     if (visited.count(v) == 0) {
@@ -56,7 +44,6 @@ template <typename vertex> bool is_cycle(const directed_graph<vertex> &d, const 
     pending.erase(v);
     return false;
 }
-//END HELPERS
 
 /*
  * Computes whether the input is a Directed Acyclic Graph (DAG).
@@ -86,7 +73,6 @@ template <typename vertex> void sort(const directed_graph<vertex> &d, const vert
             sort(d, *neighbour, visited, sorted);
     }
     sorted.push(v);
-
 }
 
 /*
@@ -116,25 +102,6 @@ std::list<vertex> topological_sort(const directed_graph<vertex> & d) {
     return result;
 }
 
-template <typename vertex> bool is_path(const directed_graph<vertex> &d, const std::size_t size, const vertex &v) {
-//    if (visited.count(v) == 0) {
-//        visited.insert(v);
-//        pending.insert(v);
-//        for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
-//            auto curr_neigh = *neighbour;
-//            bool exists_in_visited = visited.count(*neighbour) != 0;
-//            bool exists_in_pending = pending.count(*neighbour) != 0;
-//            if (!exists_in_visited && is_cycle(d, *neighbour, visited, pending))
-//                return true;
-//            else if (exists_in_pending)
-//                return true;
-//        }
-//    }
-//    pending.erase(v);
-    return false;
-
-}
-
 /*
  * Given a DAG, computes whether there is a Hamiltonian path.
  * a Hamiltonian path is a path that visits every vertex
@@ -142,14 +109,24 @@ template <typename vertex> bool is_path(const directed_graph<vertex> &d, const s
  */
 template <typename vertex>
 bool is_hamiltonian_dag(const directed_graph<vertex> & d) {
-    std::unordered_set<vertex> visited;
-
-    for (auto vert : d) {
-        bool x = is_path(d, d.num_vertices(), vert);
-        if (x)
-            return true;
+    //Check if graph is empty or only contains a single element
+    if (d.num_vertices() < 1) {
+        return true;
     }
-    return false;
+
+    std::list<vertex> sorted = topological_sort(d);
+    std::vector<vertex> topology;
+
+    for (auto vert : sorted) {
+        topology.push_back(vert);
+    }
+
+    for (int i=0; i<topology.size() - 1; ++i) {
+        if (!(d.adjacent(topology[i], topology[i+1]))) {
+            return false;
+        }
+    }
+    return true;
 }
 
 /*

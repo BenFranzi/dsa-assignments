@@ -39,13 +39,24 @@ int main() {
     //std::cout << "true(1) || false(0) " << is_hamiltonian_dag(graph) << std::endl;
 
     //TEST SHORTEST
+    //graph.add_edge(a, b);
+    //graph.add_edge(b, d);
+    //graph.add_edge(b, e);
+    //graph.add_edge(a, e);
+    //graph.add_edge(d, c);
+    //shortest_distances(graph, b);
 
+    //TEST HAMILTONIAN
     graph.add_edge(a, b);
-    graph.add_edge(b, d);
-    graph.add_edge(b, e);
-    graph.add_edge(a, e);
-    graph.add_edge(d, c);
+    graph.add_edge(a, c);
 
-    shortest_distances(graph, b);
+    graph.add_edge(b, e);
+    graph.add_edge(b, d);
+    graph.add_edge(c, d);
+    graph.add_edge(d, e);
+
+    std::cout << "should be false (0): " << is_hamiltonian_dag(graph) << std::endl;
+    graph.add_edge(c, b);
+    std::cout << "should be true  (1): " << is_hamiltonian_dag(graph) << std::endl;
     return 0;
 }

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph_algorithms.cpp" "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug/CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o"
-  "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/main.cpp" "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug/CMakeFiles/a2.dir/main.cpp.o"
+  "/Users/benfranzi/Documents/dsa-assignments/a2/directed_graph_algorithms.cpp" "/Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug/CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o"
+  "/Users/benfranzi/Documents/dsa-assignments/a2/main.cpp" "/Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug/CMakeFiles/a2.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

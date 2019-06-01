@@ -36,8 +36,7 @@
 //}
 
 
-//HELPERS
-template <typename vertex> bool DFS(const directed_graph<vertex> & d, vertex &v,  std::stack<vertex> &pending, std::vector<vertex> &pendingArray) {
+
 //    pending.push(v);
 //    pendingArray.push_back(v);
 //    for (auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
@@ -50,6 +49,65 @@ template <typename vertex> bool DFS(const directed_graph<vertex> & d, vertex &v,
 //    auto popped = pending.pop();
 //    pendingArray.erase(popped);
 //    return true;
+
+
+//Print relationships
+template <typename vertex> void print_graph(const directed_graph<vertex> & d) {
+    for (auto item : d) {
+        std::cout << item << " --> ";
+        for(auto neighbour = d.nbegin(item); neighbour != d.nend(item); ++neighbour) {
+            std::cout << *neighbour;
+        }
+        std::cout << std::endl;
+    }
+}
+
+
+//DFS
+template <typename vertex> bool is_cycle(const directed_graph<vertex> & d, const vertex &v) {
+
+    std::unordered_set<vertex> visited;
+    std::stack<vertex> pending;
+
+    std::vector<vertex> result;
+
+    pending.push(v);
+
+    while (!pending.empty()) {
+        vertex curr = pending.top();
+        pending.pop();
+
+        result.push_back(curr);
+        if (visited.count(curr) == 0) {
+            visited.insert(curr);
+            for (auto neighbour = d.nbegin(curr); neighbour != d.nend(curr); ++neighbour) {
+                auto reee = *neighbour;
+                pending.push(*neighbour);
+            }
+        }
+    }
+    int x = 10;
+    return false;
+
+//    .push(v);
+//
+//    while (!unprocessed.empty()) {
+//        vertex u = unprocessed.top();
+//        unprocessed.pop();
+//        //Check if visited
+//        if (visited.count(u) == 0) {
+//            visited.insert(u);
+//            for (auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
+//                auto y = *neighbour;
+//                unprocessed.push(*neighbour);
+//            }
+//        } else {
+//            //return true;
+//        }
+//    }
+//    int x = 10;
+//    return false;
+
 }
 //END HELPERS
 
@@ -60,14 +118,12 @@ template <typename vertex> bool DFS(const directed_graph<vertex> & d, vertex &v,
  * vertex, and returns to it.
  */
 template <typename vertex>
-bool is_dag(const directed_graph<vertex> & d) {
-    for (auto item : d) {
-        std::cout << item << " --> ";
-        for(auto neighbour = d.nbegin(item); neighbour != d.nend(item); ++neighbour) {
-            std::cout << *neighbour;
-        }
-        std::cout << std::endl;
-    }
+bool is_dag(const directed_graph<vertex> & d, vertex &startvertex) {
+//    for (auto vert : d) {
+//        if (is_cycle(d, vert))
+//            return false;
+//    }
+    is_cycle(d, startvertex);
     return true;
 }
 

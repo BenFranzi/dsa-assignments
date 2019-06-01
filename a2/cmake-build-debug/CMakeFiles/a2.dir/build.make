@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2"
+CMAKE_SOURCE_DIR = /Users/benfranzi/Documents/dsa-assignments/a2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/a2.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/a2.dir/flags.make
 
 CMakeFiles/a2.dir/main.cpp.o: CMakeFiles/a2.dir/flags.make
 CMakeFiles/a2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a2.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a2.dir/main.cpp.o -c "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a2.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a2.dir/main.cpp.o -c /Users/benfranzi/Documents/dsa-assignments/a2/main.cpp
 
 CMakeFiles/a2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a2.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/main.cpp" > CMakeFiles/a2.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/benfranzi/Documents/dsa-assignments/a2/main.cpp > CMakeFiles/a2.dir/main.cpp.i
 
 CMakeFiles/a2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a2.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/main.cpp" -o CMakeFiles/a2.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/benfranzi/Documents/dsa-assignments/a2/main.cpp -o CMakeFiles/a2.dir/main.cpp.s
 
 CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o: CMakeFiles/a2.dir/flags.make
 CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o: ../directed_graph_algorithms.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o -c "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph_algorithms.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o -c /Users/benfranzi/Documents/dsa-assignments/a2/directed_graph_algorithms.cpp
 
 CMakeFiles/a2.dir/directed_graph_algorithms.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a2.dir/directed_graph_algorithms.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph_algorithms.cpp" > CMakeFiles/a2.dir/directed_graph_algorithms.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/benfranzi/Documents/dsa-assignments/a2/directed_graph_algorithms.cpp > CMakeFiles/a2.dir/directed_graph_algorithms.cpp.i
 
 CMakeFiles/a2.dir/directed_graph_algorithms.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a2.dir/directed_graph_algorithms.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph_algorithms.cpp" -o CMakeFiles/a2.dir/directed_graph_algorithms.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/benfranzi/Documents/dsa-assignments/a2/directed_graph_algorithms.cpp -o CMakeFiles/a2.dir/directed_graph_algorithms.cpp.s
 
 # Object files for target a2
 a2_OBJECTS = \
@@ -95,7 +95,7 @@ a2: CMakeFiles/a2.dir/main.cpp.o
 a2: CMakeFiles/a2.dir/directed_graph_algorithms.cpp.o
 a2: CMakeFiles/a2.dir/build.make
 a2: CMakeFiles/a2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable a2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable a2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/a2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/a2.dir/clean:
 .PHONY : CMakeFiles/a2.dir/clean
 
 CMakeFiles/a2.dir/depend:
-	cd "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2" "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2" "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug" "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug" "/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/cmake-build-debug/CMakeFiles/a2.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/benfranzi/Documents/dsa-assignments/a2 /Users/benfranzi/Documents/dsa-assignments/a2 /Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug /Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug /Users/benfranzi/Documents/dsa-assignments/a2/cmake-build-debug/CMakeFiles/a2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/a2.dir/depend
 

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph.hpp
+/Users/benfranzi/Documents/dsa-assignments/a2/directed_graph.hpp
 unordered_set
 -
 unordered_map
 -
 
-/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph_algorithms.cpp
+/Users/benfranzi/Documents/dsa-assignments/a2/directed_graph_algorithms.cpp
 iostream
 -
 vector
@@ -54,13 +54,13 @@ exception
 stdexcept
 -
 directed_graph.hpp
-/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph.hpp
+/Users/benfranzi/Documents/dsa-assignments/a2/directed_graph.hpp
 
-/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/main.cpp
+/Users/benfranzi/Documents/dsa-assignments/a2/main.cpp
 iostream
 -
 directed_graph_algorithms.cpp
-/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph_algorithms.cpp
+/Users/benfranzi/Documents/dsa-assignments/a2/directed_graph_algorithms.cpp
 directed_graph.hpp
-/Users/benfranzi/Documents/OneDrive - UTS/Documents/University/DSA/dsa-assignments/a2/directed_graph.hpp
+/Users/benfranzi/Documents/dsa-assignments/a2/directed_graph.hpp
 

@@ -29,10 +29,13 @@ int main() {
     graph.add_edge(d, b);
     graph.add_edge(c, f);
 
-//    print_graph(graph);
-    std::cout << "should be true  (1): " << is_dag(graph) << std::endl;
-    graph.add_edge(b, c);
-    std::cout << "should be false (0): " << is_dag(graph) << std::endl;
+    //TEST DAG
+    //print_graph(graph);
+    //std::cout << "should be true  (1): " << is_dag(graph) << std::endl;
+    //graph.add_edge(b, c);
+    //std::cout << "should be false (0): " << is_dag(graph) << std::endl;
 
+    //TEST TOPO
+    topological_sort(graph);
     return 0;
 }

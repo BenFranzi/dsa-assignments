@@ -26,30 +26,6 @@
 
 #include "directed_graph.hpp"
 
-////iterator pattern
-//for (auto item : d) {
-//std::cout << item << " --> ";
-//for(auto neighbour = d.nbegin(item); neighbour != d.nend(item); ++neighbour) {
-//std::cout << *neighbour;
-//}
-//std::cout << std::endl;
-//}
-
-
-
-//    pending.push(v);
-//    pendingArray.push_back(v);
-//    for (auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
-//        for (vertex item : pendingArray) {
-//            if (item == *neighbour) //duplicate item in pending;
-//                return false;
-//            DFS(d, *neighbour, pending, pendingArray);
-//        }
-//    }
-//    auto popped = pending.pop();
-//    pendingArray.erase(popped);
-//    return true;
-
 
 //Print relationships
 template <typename vertex> void print_graph(const directed_graph<vertex> & d) {
@@ -103,6 +79,17 @@ bool is_dag(const directed_graph<vertex> & d) {
     return true;
 }
 
+template <typename vertex> void sort(const directed_graph<vertex> &d, const vertex &v, std::unordered_set<vertex> & visited, std::stack<vertex> & sorted) {
+    visited.insert(v);
+    for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
+        bool exists_in_visited = visited.count(*neighbour) != 0;
+        if (!exists_in_visited)
+            sort(d, *neighbour, visited, sorted);
+    }
+    sorted.push(v);
+
+}
+
 /*
  * Computes a topological ordering of the vertices.
  * For every vertex u in the order, and any of its
@@ -110,7 +97,24 @@ bool is_dag(const directed_graph<vertex> & d) {
  */
 template <typename vertex>
 std::list<vertex> topological_sort(const directed_graph<vertex> & d) {
-    return std::list<vertex>();
+    std::unordered_set<vertex> visited;
+    std::stack<vertex> sorted;
+
+    for (auto vert : d) {
+        bool exists_in_visited = visited.count(vert) != 0;
+        if (!exists_in_visited) {
+            sort(d, vert, visited, sorted);
+        }
+    }
+
+    std::list<vertex> result;
+    while (!sorted.empty())
+    {
+        result.push_back(sorted.top());
+        sorted.pop();
+    }
+
+    return result;
 }
 
 /*

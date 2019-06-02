@@ -78,6 +78,6 @@ int main() {
     graph.add_edge(g, h);
     graph.add_edge(h, d);
 
-    strongly_connected_components(graph);
+    components(graph);
     return 0;
 }

@@ -129,6 +129,16 @@ bool is_hamiltonian_dag(const directed_graph<vertex> & d) {
     return true;
 }
 
+template <typename vertex> void convert_graph(const directed_graph<vertex> & d, directed_graph<vertex> & graph, vertex & v, std::unordered_set<vertex> & visited) {
+    if (visited.count(v) == 0) {
+        visited.insert(v);
+        for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
+            graph.add_edge(v, *neighbour);
+            graph.add_edge(*neighbour, v);
+        }
+    }
+}
+
 /*
  * Computes the weakly connected components of the graph.
  * A [weak] component is the smallest subset of the vertices
@@ -137,7 +147,15 @@ bool is_hamiltonian_dag(const directed_graph<vertex> & d) {
  */
 template <typename vertex>
 std::vector<std::vector<vertex>> components(const directed_graph<vertex> & d) {
-    return std::vector<std::vector<vertex>>();
+    directed_graph<vertex> graph;
+    std::unordered_set<vertex> visited;
+    for (auto vert : d) {
+        graph.add_vertex(vert);
+    }
+    for (auto vert : d) {
+        convert_graph(d, graph, vert, visited);
+    }
+    return strongly_connected_components(graph);
 }
 
 template <typename vertex> void tarjan(

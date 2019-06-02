@@ -32,8 +32,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/a1/a1.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="4116">
-                    <caret line="416" column="5" lean-forward="true" selection-start-line="416" selection-start-column="5" selection-end-line="416" selection-end-column="5" />
+                  <state relative-caret-position="261">
+                    <caret line="159" column="5" lean-forward="true" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
                     <folding>
                       <element signature="e#344#361#0" expanded="true" />
                       <element signature="e#394#411#0" expanded="true" />
@@ -113,17 +113,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/directed_graph_algorithms.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="116" column="51" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
+            <state relative-caret-position="271">
+              <caret line="293" column="1" lean-forward="true" selection-start-line="293" selection-start-column="1" selection-end-line="293" selection-end-column="1" />
               <folding>
                 <element signature="e#127#146#0" expanded="true" />
                 <element signature="e#2056#2073#0" expanded="true" />
                 <element signature="e#1112#1129#0" expanded="true" />
                 <element signature="e#3358#3375#0" expanded="true" />
-                <element signature="e#3673#3690#0" expanded="true" />
-                <element signature="e#4058#4075#0" expanded="true" />
-                <element signature="e#5275#5292#0" expanded="true" />
+                <element signature="e#6020#6037#0" expanded="true" />
+                <element signature="e#7595#7612#0" expanded="true" />
                 <element signature="e#3853#3870#0" expanded="true" />
+                <element signature="e#9102#9119#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,8 +156,8 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="24" />
     <option name="width" value="815" />
     <option name="height" value="848" />
   </component>
@@ -230,12 +230,12 @@
       <workItem from="1559307354994" duration="2279000" />
       <workItem from="1559347142777" duration="4000" />
       <workItem from="1559347148786" duration="36000" />
-      <workItem from="1559347237301" duration="32085000" />
+      <workItem from="1559347237301" duration="35701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42195000" />
+    <option name="totallyTimeSpent" value="45811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -247,7 +247,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="815" height="848" extended-state="0" />
+    <frame x="0" y="24" width="1440" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1509299" />
@@ -280,12 +280,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/directed_graph_algorithms.cpp</url>
-          <line>271</line>
+          <line>292</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/directed_graph_algorithms.cpp</url>
-          <line>234</line>
+          <line>208</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
@@ -323,10 +323,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/directed_graph.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding>
+            <element signature="e#111#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/a1/a1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4116">
-          <caret line="416" column="5" lean-forward="true" selection-start-line="416" selection-start-column="5" selection-end-line="416" selection-end-column="5" />
+        <state relative-caret-position="261">
+          <caret line="159" column="5" lean-forward="true" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
           <folding>
             <element signature="e#344#361#0" expanded="true" />
             <element signature="e#394#411#0" expanded="true" />
@@ -385,36 +402,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/directed_graph.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-          <folding>
-            <element signature="e#111#128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/directed_graph_algorithms.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="116" column="51" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
+        <state relative-caret-position="271">
+          <caret line="293" column="1" lean-forward="true" selection-start-line="293" selection-start-column="1" selection-end-line="293" selection-end-column="1" />
           <folding>
             <element signature="e#127#146#0" expanded="true" />
             <element signature="e#2056#2073#0" expanded="true" />
             <element signature="e#1112#1129#0" expanded="true" />
             <element signature="e#3358#3375#0" expanded="true" />
-            <element signature="e#3673#3690#0" expanded="true" />
-            <element signature="e#4058#4075#0" expanded="true" />
-            <element signature="e#5275#5292#0" expanded="true" />
+            <element signature="e#6020#6037#0" expanded="true" />
+            <element signature="e#7595#7612#0" expanded="true" />
             <element signature="e#3853#3870#0" expanded="true" />
+            <element signature="e#9102#9119#0" expanded="true" />
           </folding>
         </state>
       </provider>

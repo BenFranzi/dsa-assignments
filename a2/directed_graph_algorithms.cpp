@@ -45,7 +45,7 @@ template <typename vertex> bool is_dag(const directed_graph<vertex> & d) {
 
 /**
  * Determines if a cycle is found under a given vertex
- * @param d - reference to the whole graph
+ * @param d - reference to the graph
  * @param v - current vertex to iterate from
  * @param visited - list of the vertices that have been visited
  * @param pending - list of vertices visited on current path
@@ -72,17 +72,7 @@ template <typename vertex> bool is_cycle(const directed_graph<vertex> &d, const 
     return false;
 }
 
-template <typename vertex> void sort(const directed_graph<vertex> &d, const vertex &v, std::unordered_set<vertex> & visited, std::stack<vertex> & sorted) {
-    visited.insert(v);
-    for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
-        bool exists_in_visited = visited.count(*neighbour) != 0;
-        if (!exists_in_visited)
-            sort(d, *neighbour, visited, sorted);
-    }
-    sorted.push(v);
-}
-
-/*
+/**
  * Computes a topological ordering of the vertices.
  * For every vertex u in the order, and any of its
  * neighbours v, v appears later in the order than u.
@@ -91,22 +81,41 @@ template <typename vertex>
 std::list<vertex> topological_sort(const directed_graph<vertex> & d) {
     std::unordered_set<vertex> visited;
     std::stack<vertex> sorted;
-
     for (auto vert : d) {
-        bool exists_in_visited = visited.count(vert) != 0;
-        if (!exists_in_visited) {
+        // Until all vertices have been visited
+        if (visited.count(vert) == 0) {
+            //perform a sort from the current node
             sort(d, vert, visited, sorted);
         }
     }
 
+    //Convert the topological sort stack into a list to match the return type
     std::list<vertex> result;
     while (!sorted.empty())
     {
         result.push_back(sorted.top());
         sorted.pop();
     }
-
     return result;
+}
+
+/**
+ * Peforms a topological sort from a given vertex
+ * @param d - reference to the graph
+ * @param v - current vertex to iterate from
+ * @param visited - list of the vertices that have been visited
+ * @param sorted - list of vertices that have been added to the toplogical order
+ */
+template <typename vertex> void sort(const directed_graph<vertex> &d, const vertex &v, std::unordered_set<vertex> & visited, std::stack<vertex> & sorted) {
+    //Add the current node to the nodes that have been visited
+    visited.insert(v);
+    for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
+        //if the neighbour has not been visited yet recursively call this function
+        if (visited.count(*neighbour) == 0)
+            sort(d, *neighbour, visited, sorted);
+    }
+    //add the current node to the topological stack
+    sorted.push(v);
 }
 
 /*

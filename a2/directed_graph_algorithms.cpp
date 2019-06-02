@@ -1,8 +1,3 @@
-/*
- * Notice that the list of included headers has
- * expanded a little. As before, you are not allowed
- * to add to this.
- */
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -26,43 +21,55 @@
 
 #include "directed_graph.hpp"
 
-//DFS
-template <typename vertex> bool is_cycle(const directed_graph<vertex> &d, const vertex &v, std::unordered_set<vertex> & visited, std::unordered_set<vertex> & pending) {
-    if (visited.count(v) == 0) {
-        visited.insert(v);
-        pending.insert(v);
-        for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
-            auto curr_neigh = *neighbour;
-            bool exists_in_visited = visited.count(*neighbour) != 0;
-            bool exists_in_pending = pending.count(*neighbour) != 0;
-            if (!exists_in_visited && is_cycle(d, *neighbour, visited, pending))
-                return true;
-            else if (exists_in_pending)
-                return true;
-        }
-    }
-    pending.erase(v);
-    return false;
-}
-
-/*
+/**
  * Computes whether the input is a Directed Acyclic Graph (DAG).
  * A digraph is a DAG if there is no vertex that has a cycle.
  * A cycle is a non-empty set of [out-]edges that starts at one
  * vertex, and returns to it.
  */
-template <typename vertex>
-bool is_dag(const directed_graph<vertex> & d) {
+template <typename vertex> bool is_dag(const directed_graph<vertex> & d) {
     std::unordered_set<vertex> visited;
     std::unordered_set<vertex> pending;
+    //Iterate over each vertex in the graph
     for (auto vert : d) {
+        //Clear the visit and pending sets for next iteration
         visited.clear();
         pending.clear();
-        bool x = is_cycle(d, vert, visited, pending);
-        if (x)
+        //If recursive call returns having found a cycle it is not acyclic
+        if (is_cycle(d, vert, visited, pending))
             return false;
     }
+    //If no cycle is found then the graph is acyclic
     return true;
+}
+
+/**
+ * Determines if a cycle is found under a given vertex
+ * @param d - reference to the whole graph
+ * @param v - current vertex to iterate from
+ * @param visited - list of the vertices that have been visited
+ * @param pending - list of vertices visited on current path
+ * @return true if a cycle is found, false if the no cycle is found
+ */
+template <typename vertex> bool is_cycle(const directed_graph<vertex> &d, const vertex &v, std::unordered_set<vertex> & visited, std::unordered_set<vertex> & pending) {
+    //If the cycle has not been visited
+    if (visited.count(v) == 0) {
+        visited.insert(v);
+        pending.insert(v);
+        //For each neighbour of the given vertex
+        for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
+            auto curr_neigh = *neighbour;
+            // If the current neighbour has not be visited and the recursive cycle has found a cycle then a cycle exists
+            if (visited.count(*neighbour) == 0 && is_cycle(d, *neighbour, visited, pending))
+                return true;
+            //If the current neighbour already exists in the pending queue then a cycle exists
+            else if (pending.count(*neighbour) != 0)
+                return true;
+        }
+    }
+    //Remove the current vertex from the pending as no cycle was found from that point
+    pending.erase(v);
+    return false;
 }
 
 template <typename vertex> void sort(const directed_graph<vertex> &d, const vertex &v, std::unordered_set<vertex> & visited, std::stack<vertex> & sorted) {

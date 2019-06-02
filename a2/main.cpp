@@ -36,10 +36,10 @@ int main() {
     //print_graph(graph);
     //std::cout << "should be true  (1): " << is_dag(graph) << std::endl;
     //graph.add_edge(b, c);
-    //std::cout << "should be false (0): " << is_dag(graph) << std::endl;
+    std::cout << "should be false (0): " << is_dag(graph) << std::endl;
 
     //TEST TOPO
-    //std::cout << "true(1) || false(0) " << is_hamiltonian_dag(graph) << std::endl;
+    std::cout << "true(1) || false(0) " << is_hamiltonian_dag(graph) << std::endl;
 
     //TEST SHORTEST
     //graph.add_edge(a, b);
@@ -47,7 +47,7 @@ int main() {
     //graph.add_edge(b, e);
     //graph.add_edge(a, e);
     //graph.add_edge(d, c);
-    //shortest_distances(graph, b);
+    shortest_distances(graph, b);
 
     //TEST HAMILTONIAN
     //graph.add_edge(a, b);
@@ -58,7 +58,7 @@ int main() {
     //graph.add_edge(c, d);
     //graph.add_edge(d, e);
 
-    //std::cout << "should be false (0): " << is_hamiltonian_dag(graph) << std::endl;
+    std::cout << "should be false (0): " << is_hamiltonian_dag(graph) << std::endl;
     //graph.add_edge(c, b);
     //std::cout << "should be true  (1): " << is_hamiltonian_dag(graph) << std::endl;
 

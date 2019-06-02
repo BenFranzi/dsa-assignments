@@ -278,7 +278,6 @@ template <typename vertex> void tarjan(
 template <typename vertex>
 std::unordered_map<vertex, int> shortest_distances(const directed_graph<vertex> & d, const vertex & u) {
     std::unordered_map<vertex, int> results;
-    std::unordered_set<vertex> visited;
     //for every vertex in the graph set it's distance to the total number of vertices + 1
     for (auto vert : d) {
         if (vert == u) {
@@ -289,7 +288,7 @@ std::unordered_map<vertex, int> shortest_distances(const directed_graph<vertex> 
         }
     }
     //Recursively find the distance
-    find_distance(d, u, results, 1, visited);
+    find_distance(d, u, results, 1);
     return results;
 }
 
@@ -299,22 +298,19 @@ std::unordered_map<vertex, int> shortest_distances(const directed_graph<vertex> 
  * @param u - the current vertex
  * @param results - map of distances from the given vertex
  * @param count - the current position away from the start vertex
- * @param visited -
  */
 template <typename vertex> void find_distance(
         const directed_graph<vertex> & d,
         const vertex & u,
         std::unordered_map<vertex, int> & results,
-        const int & count,
-        std::unordered_set<vertex> & visited
+        const int & count
     ) {
-    //
-
     for(auto neighbour = d.nbegin(u); neighbour != d.nend(u); ++neighbour) {
-        //If the current count
+        //If the current count of this recursive stack is lower than a previous visit
         if  (count < results[*neighbour]) {
+            //Set the current count to the lower value
             results[*neighbour] = count;
-            find_distance(d, *neighbour, results, count + 1, visited);
+            find_distance(d, *neighbour, results, count + 1);
         }
     }
 }

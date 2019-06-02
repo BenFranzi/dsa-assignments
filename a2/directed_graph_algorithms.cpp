@@ -140,28 +140,42 @@ std::vector<std::vector<vertex>> components(const directed_graph<vertex> & d) {
     return std::vector<std::vector<vertex>>();
 }
 
-template <typename vertex> int min(const int a, const int b) {
-    if (a < b) {
-        return a;
-    }
-    return b;
-}
+template <typename vertex> void tarjan(
+        const directed_graph<vertex> & d,
+        const vertex & v,
+        std::unordered_map<vertex, int> & index,
+        std::unordered_map<vertex, int> & low,
+        std::stack<vertex> & st,
+        std::unordered_set<vertex> & onstack,
+        std::vector<std::vector<vertex>> & result
+        ) {
+    static int time = 0;
 
-template <typename vertex> void tarjan(const directed_graph<vertex> & d, const vertex & v, int & i, std::unordered_map<vertex, int> index, std::unordered_map<vertex, int> low, std::stack<vertex> stack, std::unordered_set<vertex> onstack) {
-    index[v] = i;
-    low[v] = index;
-    index = index++;
-    stack.push(v);
+    index[v] = time;
+    low[v] = time;
+    time++;
+    st.push(v);
     onstack.insert(v);
 
     for(auto neighbour = d.nbegin(v); neighbour != d.nend(v); ++neighbour) {
-        if (index[*neighbour] == -1) {
-            tarjan(d, *neighbour, i, index, low, stack, onstack);
-            low[v] = min(low[v], low[*neighbour]);
-        } else if (onstack.count(neighbour) != 0) {
-            low[v] = min(low[v], low[*neighbour]);
+        if (index.count(*neighbour) == 0) {
+            tarjan(d, *neighbour, index, low, st, onstack, result);
+            low[v] = (low[v] < low[*neighbour]) ? low[v] : low[*neighbour];
+        } else if (onstack.count(*neighbour) != 0) {
+            low[v] = (low[v] < index[*neighbour]) ? low[v] : index[*neighbour];
         }
-        
+    }
+
+    if (low[v] == index[v]) {
+        std::vector<vertex> new_components;
+        auto w = st.top();
+        do {
+            w = st.top();
+            onstack.erase(w);
+            new_components.push_back(w);
+            st.pop();
+        } while (w != v);
+        result.push_back(new_components);
     }
 }
 
@@ -172,24 +186,19 @@ template <typename vertex> void tarjan(const directed_graph<vertex> & d, const v
  * v is reachable from u and u is reachable from v.
  */
 template <typename vertex> std::vector<std::vector<vertex>> strongly_connected_components(const directed_graph<vertex> & d) {
-    int i = 0;
     std::unordered_map<vertex, int> index;
     std::unordered_map<vertex, int> low;
-    std::stack<vertex> stack;
+    std::stack<vertex> st;
     std::unordered_set<vertex> onstack;
+    std::vector<std::vector<vertex>> result;
 
     for (auto vert : d) {
-        index[vert] = -1;
-        low[vert] = -1;
-    }
-
-    for (auto vert : d) {
-        if (index[vert] == -1) {
-            tarjan(d, vert, i, index, low, stack, onstack);
+        if (index.count(vert) == 0) {
+            tarjan(d, vert, index, low, st, onstack, result);
         }
     }
 
-    return std::vector<std::vector<vertex>>();
+    return result;
 }
 
 

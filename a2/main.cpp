@@ -19,6 +19,9 @@ int main() {
     graph.add_vertex(c);
     graph.add_vertex(d);
     graph.add_vertex(e);
+    graph.add_vertex(f);
+    graph.add_vertex(g);
+    graph.add_vertex(h);
 //    graph.add_vertex(f);
 
 //    graph.add_edge(a, b);
@@ -47,16 +50,34 @@ int main() {
     //shortest_distances(graph, b);
 
     //TEST HAMILTONIAN
+    //graph.add_edge(a, b);
+    //graph.add_edge(a, c);
+
+    //graph.add_edge(b, e);
+    //graph.add_edge(b, d);
+    //graph.add_edge(c, d);
+    //graph.add_edge(d, e);
+
+    //std::cout << "should be false (0): " << is_hamiltonian_dag(graph) << std::endl;
+    //graph.add_edge(c, b);
+    //std::cout << "should be true  (1): " << is_hamiltonian_dag(graph) << std::endl;
+
+    //SCC
+
+    graph.add_edge(a, e);
+    graph.add_edge(e, a);
     graph.add_edge(a, b);
-    graph.add_edge(a, c);
-
-    graph.add_edge(b, e);
-    graph.add_edge(b, d);
-    graph.add_edge(c, d);
-    graph.add_edge(d, e);
-
-    std::cout << "should be false (0): " << is_hamiltonian_dag(graph) << std::endl;
+    graph.add_edge(e, f);
+    graph.add_edge(b, f);
     graph.add_edge(c, b);
-    std::cout << "should be true  (1): " << is_hamiltonian_dag(graph) << std::endl;
+    graph.add_edge(f, c);
+    graph.add_edge(f, g);
+    graph.add_edge(c, g);
+    graph.add_edge(c, d);
+    graph.add_edge(d, g);
+    graph.add_edge(g, h);
+    graph.add_edge(h, d);
+
+    strongly_connected_components(graph);
     return 0;
 }

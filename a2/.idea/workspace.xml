@@ -12,7 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c59ded7d-cfd6-4a7c-8d59-b8e56ec1bc2c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/a2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/directed_graph_algorithms.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/directed_graph_algorithms.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="59" column="83" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
+            <state relative-caret-position="-7">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -39,12 +42,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/directed_graph_algorithms.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="163" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="8" />
+            <state relative-caret-position="249">
+              <caret line="151" column="24" lean-forward="true" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
               <folding>
                 <element signature="e#1227#1244#0" expanded="true" />
                 <element signature="e#2249#2266#0" expanded="true" />
-                <element signature="e#4057#4074#0" expanded="true" />
                 <element signature="e#4058#4075#0" expanded="true" />
                 <element signature="e#5275#5292#0" expanded="true" />
                 <element signature="e#3853#3870#0" expanded="true" />
@@ -86,8 +88,8 @@
     <findStrings>
       <find>neigh</find>
       <find>iterat</find>
-      <find>testdis</find>
       <find>map</find>
+      <find>testdis</find>
       <find>unordered_set</find>
     </findStrings>
   </component>
@@ -181,12 +183,21 @@
       <workItem from="1559307354994" duration="2279000" />
       <workItem from="1559347142777" duration="4000" />
       <workItem from="1559347148786" duration="36000" />
-      <workItem from="1559347237301" duration="19170000" />
+      <workItem from="1559347237301" duration="27205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29280000" />
+    <option name="totallyTimeSpent" value="37315000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="720" height="848" extended-state="0" />
@@ -197,16 +208,16 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.11088083" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.20238096" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.10978836" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35978836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936507" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.26632124" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.4378307" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936507" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32936507" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.15873016" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -222,8 +233,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/directed_graph_algorithms.cpp</url>
-          <line>228</line>
+          <line>237</line>
           <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/directed_graph_algorithms.cpp</url>
+          <line>200</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/directed_graph_algorithms.cpp</url>
+          <line>177</line>
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -309,23 +330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/directed_graph.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="979">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#111#128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="59" column="83" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12270">
@@ -339,14 +343,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/directed_graph.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="979">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="e#111#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/directed_graph_algorithms.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="163" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="8" />
+        <state relative-caret-position="249">
+          <caret line="151" column="24" lean-forward="true" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
           <folding>
             <element signature="e#1227#1244#0" expanded="true" />
             <element signature="e#2249#2266#0" expanded="true" />
-            <element signature="e#4057#4074#0" expanded="true" />
             <element signature="e#4058#4075#0" expanded="true" />
             <element signature="e#5275#5292#0" expanded="true" />
             <element signature="e#3853#3870#0" expanded="true" />
